@@ -2,11 +2,13 @@ public class Item {
     private String nameOfItem;
     private double cost;
     private Category category;
+    private int quantity;
 
-    public Item(String nameOfItem, double cost, Category category) {
+    public Item(String nameOfItem, double cost, Category category, int quantity) {
         this.nameOfItem = nameOfItem;
         this.cost = cost;
         this.category = category;
+        this.quantity = quantity;
     }
 
     public String getNameOfItem() {
@@ -31,5 +33,13 @@ public class Item {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

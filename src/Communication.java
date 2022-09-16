@@ -26,11 +26,12 @@ public interface Communication {
         if (totalCost(consumer.wishList) > consumer.getMoney()) {
             System.out.println("Ты нищеброд, закрой дверь снаружи");
         } else {
-            walkInStorage();
+            //walkInStorage();
         }
     }
 
 
     //У Покупателя и Продавца реализовать свои вариации метода "пойти на склад"
-    void walkInStorage();
+    default void walkInStorage(Human human, Item item){
+    }
 }

@@ -32,4 +32,5 @@ public abstract class Human implements Communication, DiscountAmount {
     public void setLoveIndex(int loveIndex) {
         this.loveIndex = loveIndex;
     }
+
 }

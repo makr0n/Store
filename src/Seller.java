@@ -13,8 +13,14 @@ public class Seller extends Human{
     }
 
     @Override
-    public void walkInStorage() {
+    public void walkInStorage(Human human, Item item) {
         System.out.println("Я схожу на склад");
+        if (item.getQuantity() < 1) {
+            System.out.println("Item is not available");
+        } else {
+            item.setQuantity(item.getQuantity() - 1);
+        }
+
 
 
 

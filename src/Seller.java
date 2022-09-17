@@ -1,28 +1,19 @@
-import java.util.ArrayList;
-import java.util.List;
 
-public class Seller extends Human{
-    private List<Item> items = new ArrayList<>();
+public class Seller extends Human implements Communication, DiscountAmount {
 
     public Seller(String name, double money, int loveIndex) {
         super(name, money, loveIndex);
     }
 
-    public List<Item> getItems() {
-        return items;
-    }
 
     @Override
-    public void walkInStorage(Human human, Item item) {
+    public void walkInStorage(Item item) {
         System.out.println("Я схожу на склад");
         if (item.getQuantity() < 1) {
-            System.out.println("Item is not available");
+            System.out.println("Товара нет на складе");
         } else {
-            item.setQuantity(item.getQuantity() - 1);
+            System.out.println("Товар в наличии");
         }
-
-
-
 
     }
 }

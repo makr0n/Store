@@ -1,8 +1,5 @@
-public interface DiscountAmount {
+public interface DiscountAmount extends Financial {
 
-    default Double percentDiscount(Discount discount) {
-        return Double.parseDouble(discount.getDiscount());
-    }
 
     default void checkStatus(Human human) {
         if (human.getLoveIndex() <= 0) {

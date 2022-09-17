@@ -1,4 +1,4 @@
-public abstract class Human implements Communication, DiscountAmount {
+public abstract class Human {
     private String name;
     private double money;
     private int loveIndex;

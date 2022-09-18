@@ -1,20 +1,22 @@
 public enum Discount {
-    //TODO надо переписать значения на интовые
-    Bronze("0.10"),
-    Silver("0.15"),
-    Gold("0.20"),
-    Platinum("0.25"),
-    Diamond("0.30");
+    NODISCOUNT(1.0),
+    BRONZE(0.90),
+    SILVER(0.85),
+    GOLD(0.80),
+    PLATINUM(0.75),
+    DIAMOND(0.70);
 
-    private final String  discount;
+    private Double value;
 
-    Discount(String discount) {
-        this.discount = discount;
+    Discount(Double value) {
+        this.value = value;
     }
 
-    public String getDiscount() {
-        return discount;
+    public Double getValue() {
+        return value;
     }
 
-
+    public void setValue(Double value) {
+        this.value = value;
+    }
 }
